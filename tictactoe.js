@@ -3,7 +3,6 @@
  var symbol;
  var player = "X";
  var winner;
-
  var winnerArray;
 
  const winnerPatterns = [
@@ -21,8 +20,7 @@
 
  document.getElementById("output").innerHTML = "Player: " + player;
 
- function draw(elementId) {
-
+ function draw(elementId) {  //guess this is the brain
     if (winner != undefined) {   //so there will be no next turn 
 
         document.getElementById("output").innerHTML = winner + " is the winner!";
