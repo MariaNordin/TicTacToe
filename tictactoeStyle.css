@@ -1,0 +1,42 @@
+h1, p {
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+/*
+#gameArea {
+    border: 1px solid black;
+}*/
+
+section {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    /*border: 1px solid red;*/
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    /*border: 1px solid blue;*/
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px; 
+    border: 1px solid black;
+}
+
+button {
+    font-size: 1em;
+    padding: 10px;
+    background-color: rgb(238, 255, 248);
+}

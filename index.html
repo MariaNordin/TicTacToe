@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tictactoeStyle.css"></link>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+
+    <section>
+        <div id="gameArea">
+            <div id="container">    
+                <div class="square" id="1" onclick="draw('1')"></div>
+                <div class="square" id="2" onclick="draw('2')"></div>
+                <div class="square" id="3" onclick="draw('3')"></div>
+            </div>
+    
+            <div id="container">
+                <div class="square" id="4" onclick="draw('4')"></div>
+                <div class="square" id="5" onclick="draw('5')"></div>
+                <div class="square" id="6" onclick="draw('6')"></div>
+            </div>
+                
+            <div id="container">
+                <div class="square" id="7" onclick="draw('7')"></div>
+                <div class="square" id="8" onclick="draw('8')"></div>
+                <div class="square" id="9" onclick="draw('9')"></div>
+            </div>
+        </div>
+
+        <p id="output"></p>
+        <button onclick="reset()">Restart game</button>
+        
+    </section>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
