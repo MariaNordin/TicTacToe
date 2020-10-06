@@ -3,11 +3,6 @@ h1, p {
     text-align: center;
 }
 
-/*
-#gameArea {
-    border: 1px solid black;
-}*/
-
 section {
     display: -webkit-flex;
     display: flex;
@@ -15,7 +10,6 @@ section {
     justify-content: center;
     align-items: center;
     margin: 50px;
-    /*border: 1px solid red;*/
 }
 
 #container {
@@ -23,7 +17,6 @@ section {
     flex-direction: row;
     width: fit-content;
     height: fit-content;
-    /*border: 1px solid blue;*/
 }
 
 .square {

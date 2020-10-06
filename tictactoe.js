@@ -1,19 +1,4 @@
 
-/* function startGame() {
-    gameArea.start();
- }
-
- var gameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.id = "gameArea";
-        this.canvas.width = 420;
-        this.canvas.height = 420;
-        this.ctx = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[2]);
-    }
- }*/
-
  var turns = 0;
  var symbol;
  var player = "X";
@@ -38,10 +23,11 @@
 
  function draw(elementId) {
 
-    if (winner != undefined) {
+    if (winner != undefined) {   //so there will be no next turn 
+
         document.getElementById("output").innerHTML = winner + " is the winner!";
     }     
-    else if(isFree(elementId)) {
+    else if(isFree(elementId)) {  //check if square is available
         
         if (turns % 2 == 0) {
             symbol = "X";
@@ -67,7 +53,7 @@
             document.getElementById("output").innerHTML = "Player: " + player;
          }
     }
-    else if (isFree(elementId) == false) {
+    else if (isFree(elementId) == false) { //not ok to place game piece on top of others
         document.getElementById("output").innerHTML = "You probably know it's against the rules.";
     }
  }
@@ -83,10 +69,8 @@
  }
 
  function checkWin() {
-
-    var values = document.getElementsByClassName("square");
-
-    for(const pattern of winnerPatterns) {
+    var values = document.getElementsByClassName("square"); //get all divs(squares) into array
+    for(const pattern of winnerPatterns) {  //patterns to check for, using values as index
 
         if (values[pattern[0]].innerHTML == "" || values[pattern[1]].innerHTML == "" || values[pattern[2]].innerHTML == "") {
                 
@@ -102,8 +86,7 @@
     }
  }
 
- function highlight() {
-
+ function highlight() { //happy colours for the winner
     winnerArray.forEach(element => {
         document.getElementById(element + 1).style.backgroundColor = "LemonChiffon";
     });
