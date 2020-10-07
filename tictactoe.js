@@ -46,6 +46,7 @@
         }     
          else if (turns > 8) {
             document.getElementById("output").innerHTML = "Game over";
+            gameOver();
          }
          else {
             document.getElementById("output").innerHTML = "Player: " + player;
@@ -84,12 +85,6 @@
     }
  }
 
- function highlight() { //happy colours for the winner
-    winnerArray.forEach(element => {
-        document.getElementById(element + 1).style.backgroundColor = "LemonChiffon";
-    });
- }
-
  function reset() {
      var row = document.getElementById("gameArea");
      var squares = row.getElementsByClassName("square");
@@ -104,4 +99,23 @@
      player = "X";
      winner = undefined;
      document.getElementById("output").innerHTML = "Player: " + player;
-}
+ }
+
+function highlight() { //happy colours for the winner
+    winnerArray.forEach(element => {
+        document.getElementById(element + 1).style.backgroundColor = "LemonChiffon";
+    });
+ }
+
+ function gameOver() {
+    
+    //document.getElementById("5").innerHTML="<img src=\"crying.png\" height=\"60px\" width=\"60px\">";
+
+    var row = document.getElementById("gameArea");
+    var squares = row.getElementsByClassName("square");
+    var i;
+    
+    for (i = 0; i < squares.length; i++) {
+        squares[i].innerHTML="<img src=\"crying.png\" height=\"60px\" width=\"60px\">";
+    }
+ }
