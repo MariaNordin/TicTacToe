@@ -71,7 +71,7 @@
     var values = document.getElementsByClassName("square"); //get all divs(squares) into array
     for(const pattern of winnerPatterns) {  //patterns to check for, using values as index
 
-        if (values[pattern[0]].innerHTML == "" || values[pattern[1]].innerHTML == "" || values[pattern[2]].innerHTML == "") {
+        if (values[pattern[0]].innerHTML === "" || values[pattern[1]].innerHTML === "" || values[pattern[2]].innerHTML === "") {
                 
             continue;
         }
@@ -109,8 +109,6 @@ function highlight() { //happy colours for the winner
 
  function gameOver() {
     
-    //document.getElementById("5").innerHTML="<img src=\"crying.png\" height=\"60px\" width=\"60px\">";
-
     var row = document.getElementById("gameArea");
     var squares = row.getElementsByClassName("square");
     var i;
