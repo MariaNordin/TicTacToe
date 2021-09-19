@@ -21,7 +21,7 @@
  document.getElementById("output").innerHTML = "Player: " + player;
 
  function draw(elementId) {  //guess this is the brain
-    if (winner != undefined) {   //so there will be no next turn 
+    if (winner !== undefined) {   //so there will be no next turn 
 
         document.getElementById("output").innerHTML = winner + " is the winner!";
     }     
